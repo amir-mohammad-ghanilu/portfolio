@@ -12,7 +12,7 @@ import About from "../pages/About";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Resume from "../pages/Resume";
-import Courses from "../pages/Courses"; 
+import Courses from "../pages/Courses";
 import Comment from "../pages/Comment";
 import ContactUs from "../pages/ContactUs";
 function App() {
@@ -23,7 +23,13 @@ function App() {
   const preferdDarkMode = useMediaQuery("(prefers-color-scheme:dark)");
   const [mode, setMode] = useState();
   const handlePageNumber = (event, newPage) => {
+    console.log("eventNumber:", event);
+    console.log("pageNumber:", newPage);
+
     setPageNumber(newPage);
+  };
+  const handlePageChange = (index) => {
+    setPageNumber(index);
   };
   const modeHandler = () => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
@@ -52,7 +58,7 @@ function App() {
         </SidebarContainer>
         <DrawerActionButton />
         <PagesContainer>
-          <SwipeableViews index={pageNumber} onChangeIndex={handlePageNumber}>
+          <SwipeableViews index={pageNumber} onChangeIndex={handlePageChange}>
             <Page pageNumber={pageNumber} index={0}>
               {/** Home */}
               <Home helmetTitle="وب سایت شخصی امیرمحمد غنی لو " />

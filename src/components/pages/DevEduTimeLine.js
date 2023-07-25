@@ -24,6 +24,7 @@ function DevEduTimeLine() {
     <Timeline position="right" sx={{ direction: "ltr" }}>
       {devEdu.map((item, index) => (
         <Slide
+          key={index}
           direction="up"
           in={loading}
           style={{
@@ -31,7 +32,7 @@ function DevEduTimeLine() {
           }}
         >
           {/*devEdu* */}
-          <TimelineItem key={index}>
+          <TimelineItem>
             <TimelineSeparator>
               <TimelineDot color="info" variant="outlined">
                 <SchoolRounded color="info" />

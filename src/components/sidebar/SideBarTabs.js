@@ -14,7 +14,7 @@ function SideBarTabs() {
     <Tabs
       orientation="vertical"
       variant="scrollable"
-      scrollButton="auto"
+      scrollbutton="auto"
       allowScrollButtonsMobile
       value={pageNumber}
       indicatorColor={theme.palette.mode === "dark" ? "secondary" : "primary"}

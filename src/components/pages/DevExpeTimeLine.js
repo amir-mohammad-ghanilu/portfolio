@@ -1,7 +1,7 @@
-import React, { useState,useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import { devEdu } from "../../constants/Details";
 import { Typography } from "@mui/material";
-import {Slide} from "@mui/material";
+import { Slide } from "@mui/material";
 import { SchoolRounded } from "@mui/icons-material";
 import {
   Timeline,
@@ -23,13 +23,14 @@ function DevExpeTimeLine() {
     <Timeline position="right" sx={{ direction: "ltr" }}>
       {devEdu.map((item, index) => (
         <Slide
+          key={index}
           direction="up"
           in={loading}
           style={{
             transitionDelay: loading ? `${index + 1}99ms` : "0ms",
           }}
         >
-          <TimelineItem key={index}>
+          <TimelineItem>
             <TimelineSeparator>
               <TimelineDot color="warning" variant="outlined">
                 <SchoolRounded color="warning" />

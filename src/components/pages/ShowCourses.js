@@ -56,7 +56,7 @@ function ShowCourses() {
                     gutterBottom
                     sx={{ direction: "ltr" }}
                   >
-                    <EllipsisText text={item.info} length={"100"} />
+                    <EllipsisText text={item.info} length={100} />
                   </Typography>
                 </CardContent>
               </CardActionArea>
